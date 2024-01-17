@@ -12,6 +12,8 @@ const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 const yearElement = document.querySelector("#year");
 const imageElement = document.querySelector('img');
+const srcAttribute = imageElement.getAttribute('src');
+const altAttribute = imageElement.getAttribute('alt');
 
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
