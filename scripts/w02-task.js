@@ -24,9 +24,10 @@ let favFoods = ["Pizza", "Tacos", "Sushi", "Pasta", "Burgers"];
 foodElement.textContent = favFoods.join(', '); //This works, but is it correct?
 let newFavFood = "Ramen";
 favFoods.push(newFavFood);
-foodElement.innerHTML += `<br>${favFoods}`;
+foodElement.innerHTML += `<br>${favFoods.join(', ')}`;
 favFoods.shift();
-foodElement.innerHTML += `<br>${favFoods}`;
+foodElement.innerHTML += `<br>${favFoods.join(', ')}`;
 favFoods.pop();
-foodElement.innerHTML += `<br>${favFoods}`;
+foodElement.innerHTML += `<br>${favFoods.join(', ')}`;
+
 
