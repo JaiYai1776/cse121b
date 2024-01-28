@@ -129,7 +129,8 @@ input {
     padding: .35rem;
 }
 
-input[type="button"] {
+input[type="button"],
+button[type="submit"] {
     padding: .5rem;
     background-color: #444;
     color: white;
