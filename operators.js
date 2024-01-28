@@ -15,7 +15,7 @@ function isDestroyed(health) {
 function reloadShip() {
   shipHealth -= 1;
   shipAmmo += 3;
-}
+}f
 
 function fireShip() {
   if (shipCanFire()) {
