@@ -32,21 +32,23 @@
             <h2>Functions</h2>
             <article>
                 <h3>Addition</h3>
-                <div>
-                    <label for="add1">Number 1:</label>
-                    <input type="text" id="add1" name="add1">
-                </div>
-                <div>
-                    <label for="add2">Number 2:</label>
-                    <input type="text" id="add2" name="add2">
-                </div>
-                <div>
-                    <input type="button" id="addNumbers" value="Add Numbers">
-                </div>
-                <div>
-                    <label for="sum">Sum:</label>
-                    <input type="text" id="sum" name="sum" disabled>
-                </div>
+                <form id="additionForm">
+                    <div>
+                        <label for="add1">Number 1:</label>
+                        <input type="text" id="add1" name="add1">
+                    </div>
+                    <div>
+                        <label for="add2">Number 2:</label>
+                        <input type="text" id="add2" name="add2">
+                    </div>
+                    <div>
+                        <button type="submit" id="addNumbers">Add Numbers</button> 
+                    </div>
+                    <div>
+                        <label for="sum">Sum:</label>
+                        <input type="text" id="sum" name="sum" disabled>
+                    </div>
+                </form>
             </article>
             <article>
                 <h3>Subtraction</h3>
@@ -106,19 +108,21 @@
         <div>
             <section id="section2">
                 <h2>Selection Structures</h2>
-                <label class="right">Subtotal:
-                    <input type="number" id="subtotal" size="5">
-                </label>
-                <label class="middle right">
-                    Club Member?
-                    <input type="checkbox" id="member">
-                </label>
-                <div class="right">
-                    <input type="button" id="getTotal" value="Get Total Due">
-                </div>
-                <div class="right">Total:
-                    <span class="larger" id="total">$ --.--</span>
-                </div>
+                <form id="selectionForm">    
+                    <label class="right">Subtotal:
+                        <input type="number" id="subtotal" size="5">
+                    </label>
+                    <label class="middle right">
+                        Club Member?
+                        <input type="checkbox" id="member">
+                    </label>
+                    <div class="right">
+                        <button type="submit"> Get Total</button>
+                    </div>
+                    <div class="right">Total:
+                        <span class="larger" id="total">$ --.--</span>
+                    </div>
+                </form>
             </section>
             <section id="section3">
                 <h2>Array Methods</h2>
