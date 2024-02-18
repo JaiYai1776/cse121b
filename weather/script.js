@@ -30,11 +30,44 @@ const weather = {
         
         // Set background image of the body based on the city name
         document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`;
+
+        // Arrays for different weather conditions
+        const clearSkyConditions = ["clear sky"];
+        const cloudyConditions = ["broken clouds", "few clouds", "scattered clouds", "overcast clouds"];
+        const rainyConditions = ["light rain", "moderate rain", "heavy intensity rain", "very heavy rain", "extreme rain", "freezing rain", "light intensity shower rain", "shower rain", "heavy intensity shower rain", "ragged shower rain"];
+        const snowyConditions = ["light snow", "snow", "heavy snow", "sleet", "shower snow"];
+        const mistyConditions = ["mist", "fog", "smoke", "haze", "sand, dust whirls", "dust", "volcanic ash", "squalls", "tornado"];
+        const thunderstormConditions = ["thunderstorm with light rain", "thunderstorm with rain", "thunderstorm with heavy rain", "light thunderstorm", "thunderstorm", "heavy thunderstorm", "ragged thunderstorm", "thunderstorm with light drizzle", "thunderstorm with drizzle", "thunderstorm with heavy drizzle"];
+        const drizzleConditions = ["light intensity drizzle", "drizzle", "heavy intensity drizzle", "light intensity drizzle rain", "drizzle rain", "heavy intensity drizzle rain", "shower rain and drizzle", "heavy shower rain and drizzle", "shower drizzle"];
+
+        let conditionMessage = "";
+
+        // Check the weather condition and set the message accordingly
+        if (clearSkyConditions.includes(description)) {
+            conditionMessage = `Expect clear sky in ${name}`;
+        } else if (cloudyConditions.includes(description)) {
+            conditionMessage = `Expect cloudy sky in ${name}`;
+        } else if (rainyConditions.includes(description)) {
+            conditionMessage = `Expect rainy weather in ${name}`;
+        } else if (snowyConditions.includes(description)) {
+            conditionMessage = `Expect snowy weather in ${name}`;
+        } else if (mistyConditions.includes(description)) {
+            conditionMessage = `Expect misty weather in ${name}`;
+        } else if (thunderstormConditions.includes(description)) {
+            conditionMessage = `Expect misty weather in ${name}`;
+        } else if (drizzleConditions.includes(description)) {
+            conditionMessage = `Expect misty weather in ${name}`;
+        } else {
+            conditionMessage = `Weather condition "${description}" not handled`;
+        }
+
+        // Display the weather condition message
+        document.querySelector(".weather-condition").innerText = conditionMessage;
     },
     
     // Function to initiate a weather search based on user input
     search() {
-      this.fetchWeather(document.querySelector(".search-bar").value);
+        this.fetchWeather(document.querySelector(".search-bar").value);
     },
 };
 
